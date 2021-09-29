@@ -1,0 +1,52 @@
+{
+  "name": "carrot",
+  "version": "1.0.0",
+  "description": "UI diff tool",
+  "icons": {
+    "16": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "manifest_version": 2,
+  "page_action": {
+    "default_icon": "images/icon.png",
+    "default_title": "carrot",
+    "default_popup": "index.html"
+  },
+  "background": {
+    "scripts": [
+      "static/js/background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [
+        "static/css/content.css"
+      ],
+      "js": [
+        "static/js/content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "devtools_page": "devtools.html",
+  "permissions": [
+    "tabs",
+    "declarativeContent",
+    "storage",
+    "notifications",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "omnibox": {
+    "keyword": "柠檬"
+  },
+  "homepage_url": "http://lx.meituan.com",
+  "web_accessible_resources": [
+    "insert.js"
+  ]
+}

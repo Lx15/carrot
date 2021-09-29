@@ -1,0 +1,13 @@
+.devtoolsPanelCnt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url('../assets/login_bg.jpg') no-repeat;
+  background-size: 100% 228px;
+  height: 100vh;
+  padding-top: 120px;
+  .logo {
+      width: 120px;
+      height: 120px;
+  }
+}
